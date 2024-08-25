@@ -1,0 +1,628 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.site-container {
+    margin: auto;
+    width: min(100%, 1600px);
+    height: 100vh;
+    display: flex;
+    position: relative;
+    background-color: #ddd;
+}
+
+/* aside */
+.site-container aside {
+    background-color: white;
+    flex: 1;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+aside .aside-img {
+    padding: 15px;
+}
+
+aside .aside-img img {
+    width: 50%;
+    border-radius: 5px;
+}
+
+aside h2 {
+    padding: 8px 15px;
+}
+
+aside p {
+    color: gray;
+    padding: 8px 15px;
+    font-size: larger;
+}
+
+aside p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+aside .aside-nav {
+    padding: 8px 0;
+}
+
+aside .aside-nav a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    text-transform: uppercase;
+    padding: 16px 15px;
+}
+
+aside .aside-nav a i {
+    margin-right: 8px;
+}
+
+aside .aside-nav a:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+aside .aside-nav a:first-child {
+    color: green;
+}
+
+aside .aside-icons {
+    padding: 8px 15px;
+}
+
+aside .aside-icons i:hover {
+    color: grey;
+}
+
+/* main */
+.site-container main {
+    background-color: #ddd;
+    flex: 4;
+    height: 100%;
+    overflow: auto;
+}
+
+.site-container main::-webkit-scrollbar {
+    width: 0;
+}
+
+main header h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+    padding: 20px;
+}
+
+main header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0 5px;
+}
+
+main header nav ul li {
+    margin: 2px;
+}
+
+main header nav ul li:nth-child(1) span {
+    background-color: transparent;
+}
+
+main header nav ul li:nth-child(2) a {
+    background-color: black;
+    color: white;
+}
+
+main header nav ul li:nth-child(2):hover a {
+    color: black;
+}
+
+main header nav ul li span,
+main header nav ul li a {
+    background-color: white;
+    padding: 8px 16px;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+main header nav ul li a:hover {
+    background-color: #b2b0b0;
+}
+
+main header nav ul li a i {
+    margin-right: 8px;
+}
+
+main hr {
+    height: 5px;
+    border: none;
+    background-color: #b2b0b0;
+    display: block;
+    margin: 16px 20px;
+}
+
+
+main .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+main .container .item {
+    flex: 1 1 30%;
+    background-color: white;
+}
+
+main .container .item .item-img:hover {
+    opacity: 0.7;
+}
+
+main .container .item .item-body h3,
+main .container .item .item-body p {
+    padding: 8px 16px;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+.sled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    margin-top: 15px;
+}
+
+.sled .sled-item {
+    color: black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.sled-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.sled .sled-item:nth-child(2) {
+    background-color: black;
+    color: white;
+}
+
+.sled .sled-item:nth-child(2):hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.about {
+    padding: 20px;
+}
+
+.about-img {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.about-img img {
+    width: calc(50% - 7.5px);
+    height: auto;
+}
+
+.about-body {
+    margin-bottom: 30px;
+}
+
+.about-body h2,
+.about-body p {
+    padding: 8px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.technical {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 8px;
+    font-size: large;
+}
+
+.technical h2 {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.technical p {
+    font-size: 0.9em;
+}
+
+
+.technical .photography {
+    width: 100%;
+    height: 35px;
+    background-color: #9E9E9E;
+}
+
+.technical .photography .photo {
+    height: 100%;
+    background-color: #616161;
+    color: white;
+    width: calc(100% - 5%);
+    text-align: center;
+    font-size: 0.9em;
+    border-radius: inherit;
+    line-height: 35px;
+}
+
+.technical .w-design {
+    width: 100%;
+    height: 35px;
+    background-color: #9E9E9E;
+}
+
+.technical .w-design .design {
+    height: 100%;
+    background-color: #616161;
+    color: white;
+    width: calc(100% - 15%);
+    text-align: center;
+    border-radius: inherit;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+
+.technical .photoshop {
+    width: 100%;
+    height: 35px;
+    background-color: #9E9E9E;
+}
+
+.technical .photoshop .photosh {
+    height: 100%;
+    background-color: #616161;
+    color: white;
+    width: calc(100% - 20%);
+    text-align: center;
+    border-radius: inherit;
+    font-size: 0.9em;
+    line-height: 35px;
+}
+
+.technical a {
+    text-decoration: none;
+    color: white;
+    background-color: #616161;
+    display: inline-block;
+    padding: 12px;
+    flex-direction: none;
+    width: fit-content;
+    margin-top: 12px;
+    font-size: large;
+}
+
+.technical a:hover {
+    background-color: #b2b0b0;
+    color: black;
+}
+
+.technical a i {
+    margin-right: 6px;
+}
+
+.much {
+    padding: 28px;
+}
+
+.much h2 {
+    font-weight: 500;
+    padding: 16px 0;
+}
+
+.much .much-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.much .much-container .much-item {
+    opacity: 0.6;
+    border: 1px solid gray;
+    flex: 1 1 calc(30% - 5px);
+}
+
+.much .much-container .much-item:hover {
+    opacity: 1;
+}
+
+.much .much-container .much-item:nth-child(1) .much-head {
+    background-color: black;
+}
+
+.much .much-container .much-item:nth-child(2) .much-head {
+    background-color: #52b4ab;
+}
+
+.much .much-container .much-item:nth-child(3) .much-head {
+    background-color: black;
+}
+
+.much .much-container .much-item .much-head h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+    color: white;
+    padding: 28px;
+    text-align: center;
+}
+
+.much .much-container .much-item .much-body {
+    background-color: white;
+}
+
+.much .much-container .much-item .much-body>span {
+    display: block;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.much .much-container .much-item .much-body .span {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.much .much-container .much-item .much-body .span span {
+    font-size: 2.5em;
+}
+
+.much .much-container .much-item .much-ftr {
+    padding: 26px;
+}
+
+.much .much-container .much-item .much-ftr button {
+    display: block;
+    margin: auto;
+    background-color: #52b4ab;
+    border: none;
+    padding: 16px 26px;
+    cursor: pointer;
+}
+
+.much .much-container .much-item .much-ftr button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.contact {
+    padding: 20px;
+    background-color: #9E9E9E;
+}
+
+.contact h2 {
+    font-weight: 500;
+    padding: 16px 8px;
+}
+
+.contact .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact .contact-container .contact-item {
+    opacity: 0.6;
+    flex: 1 1 30%;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact .contact-container .contact-item:nth-child(1) {
+    background-color: black;
+}
+
+.contact .contact-container .contact-item:nth-child(2) {
+    background-color: #52b4ab;
+}
+
+.contact .contact-container .contact-item:nth-child(3) {
+    background-color: black;
+}
+
+.contact .contact-container .contact-item p {
+    text-align: center;
+}
+
+.contact .contact-container .contact-item p i {
+    font-size: 3em;
+}
+
+.contact hr {
+    height: 2px;
+    border: none;
+    background-color: #b2b0b0;
+    display: block;
+    margin: 20px 8px;
+}
+
+.contact p strong {
+    font-weight: normal;
+    font-size: larger;
+    margin: 8px 0 0 0;
+}
+
+.contact input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border: 1px solid gray;
+}
+
+.contact button {
+    background-color: black;
+    color: white;
+    font-size: x-small;
+    text-transform: capitalize;
+    width: fit-content;
+    border: none;
+    font-size: larger;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+.contact button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.contact button i {
+    margin-right: 8px;
+}
+
+footer .ftr {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: white;
+    background-color: #5F5F5F;
+}
+
+footer ul,
+footer ol {
+    flex: 0 0 30%;
+    list-style-type: none;
+}
+
+footer ul li h2,
+footer ol li h2 {
+    font-weight: normal;
+    padding: 8px 0;
+}
+
+footer ul li p {
+    padding: 8px 0;
+    line-height: 1.3;
+}
+
+footer ul li p a {
+    color: white;
+}
+
+
+footer ul:nth-child(2) li:not(:first-child) {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    padding: 16px 12px;
+    width: 100%;
+}
+
+footer ul li img {
+    width: 50px;
+}
+
+footer ul:nth-child(2) li:not(:first-child):hover {
+    background-color: #ddd;
+}
+
+footer ul li .hdr {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+footer ul li .hdr h4 {
+    font-weight: 100;
+}
+
+
+
+footer ol li span {
+    background-color: gray;
+    padding: 3px 5px;
+    color: white;
+    margin: 5px 0;
+    display: inline-block;
+}
+
+footer ol li span:first-child {
+    background-color: black;
+    padding: 5px 5px;
+}
+
+footer .footer {
+    padding: 30px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+
+footer .footer p a {
+    color: inherit;
+}
+
+@media (max-width: 992px) {
+    aside {
+        display: none;
+    }
+
+    .header-top .h-top-left {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+
+    main header nav ul li:nth-child(4),
+    main header nav ul li:nth-child(5) {
+        display: none;
+    }
+
+    main .container .item {
+        flex: 1 1 100%;
+    }
+
+    .about-img {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .about-img img {
+        width: 100%;
+    }
+
+    .much .much-container .much-item {
+        flex: 1 1 100%;
+    }
+
+    .contact .contact-container .contact-item {
+        flex: 1 1 100%;
+    }
+
+    footer .ftr ul,
+    footer .ftr ol {
+        padding: 5px 20px;
+        flex: 1 1 100%;
+    }
+}
